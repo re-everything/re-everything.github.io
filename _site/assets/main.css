@@ -270,7 +270,7 @@ table td {
 
 .site-subtitle {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 8px;
+  font-size: 10px;
   color: #000000;
   margin-top: 0;
   text-transform: uppercase;
@@ -375,29 +375,27 @@ table td {
 }
 
 .footer-col-wrapper {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Distribute columns evenly */
+  align-items: center; /* Align items vertically */
   font-size: 14px;
   color: #666666;
-  margin-left: -15px;
-  display: flex;
-  flex-wrap: wrap;
+  margin-left: 0; /* Remove negative margin */
 }
 
 .footer-col {
-  float: none;
-  margin-bottom: 15px;
+  margin-bottom: 0; /* Remove extra spacing */
   padding-left: 15px;
+  flex: 1; /* Allow columns to share available space */
 }
 
 .footer-col-1 {
-  width: calc(35% - 15px);
+  flex: 1; /* Adjust width dynamically */
 }
 
 .footer-col-2 {
-  width: calc(20% - 15px);
-}
-
-.footer-col-3 {
-  width: calc(45% - 15px);
+  flex: 1; /* Adjust width dynamically */
+  text-align: right; /* Align content to the right */
 }
 
 @media screen and (max-width: 800px) {
@@ -405,10 +403,6 @@ table td {
   .footer-col-2 {
     width: -webkit-calc(50% - (30px / 2));
     width: calc(50% - 15px);
-  }
-  .footer-col-3 {
-    width: -webkit-calc(100% - (30px / 2));
-    width: calc(100% - 15px);
   }
 }
 @media screen and (max-width: 600px) {
