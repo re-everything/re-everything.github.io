@@ -270,12 +270,12 @@ table td {
 
 .site-subtitle {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-size: 8px; /* Keep the font size as is or adjust as needed */
   color: #000000;
   margin-top: 0;
   text-transform: uppercase;
-  letter-spacing: 0px;
-  font-weight: 600;
+  letter-spacing: 1px; /* Increase spacing between letters */
+  font-weight: 500;
 }
 
 .site-nav {
