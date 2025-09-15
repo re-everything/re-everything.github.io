@@ -21,7 +21,7 @@
 title: Re-everything
 subtitle: |-
   Everything deserves to be reflected, reimagined, reinvented, reinterpreted, reviewed, revised, rethink-ed, reconnected, resonated, revolutionized, remixed, revealed, reframed, or rekindled.
-  & Somethings never to be repeated.
+  & Some things never to be repeated.
 # email: your-email@example.com
 # description: >- # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
@@ -30,6 +30,10 @@ subtitle: |-
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: https://visionbyaaron.wordpress.com/
 instagram_username: notaaronlu
+header_pages:
+  - about.markdown
+  - movies.markdown
+  - archive.markdown
 
 # Build settings
 theme: minima
