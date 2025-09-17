@@ -1,12 +1,13 @@
 
 ---
 layout: page
-title: "Post Archive"
-permalink: /archive.html
+title: "An archive of thoughts"
+permalink: /archive/
 ---
+
 <div>
-  Search through all of my posts by tag!
-</div> </br>
+  <p>A collection of my thoughts, organized by themes and topics that matter to me. Each tag represents a different facet of my journey and interests.</p>
+</div>
 
 <div id="tags-list">
 {% for tag in site.tags %}
@@ -14,18 +15,73 @@ permalink: /archive.html
   {% assign tag_name_pretty = tag_name | replace: "_", " " | capitalize %}
   <div class="tag-list">
     <div id="#{{ tag_name | slugize }}"></div>
-    <h3 class="post-list-heading line-bottom"> In #{{ tag_name }}: </h3>
+    <h3 class="post-list-heading line-bottom">In #{{ tag_name }}:</h3>
     <a name="{{ tag_name | slugize }}"></a>
     <ul class="post-list post-list-narrow">
-     {% for post in site.tags[tag_name] %}
-     <li>
-       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-       <b>
-         <a href="{{ post.url | relative_url }}">
-           {{ post.title | escape }}
-         </a>
-       </b> - <i>{{ post.date | date: date_format }}</i>
-     </li>
+      {% for post in site.tags[tag_name] %}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <b>
+          <a href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </b> - <i>{{ post.date | date: date_format }}</i>
+      </li>>
+            <span class="toggle-icon">▼</span> {{ year.name }}
+          </h2>
+          <div id="year-{{ year.name }}" class="year-content">
+            {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+            {% for month in postsByMonth %}
+              <div class="archive-month">
+                <h3 class="month-heading" onclick="toggleMonth('{{ year.name }}-{{ month.name }}')">
+                  <span class="toggle-icon">▼</span> {{ month.name }}
+                </h3>
+                <ul id="month-{{ year.name }}-{{ month.name }}" class="post-list post-list-narrow">
+                  {% for post in month.items %}
+                    <li>
+                      {%- assign date_format = "%d" -%}
+                      <span class="post-date">{{ post.date | date: date_format }}</span>
+                      <a href="{{ post.url | relative_url }}" class="post-link">
+                        {{ post.title | escape }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div id="archive-by-tag" class="archive-view" style="display: none;">
+      <div class="tags-overview">
+        {% for tag in site.tags %}
+          {% assign tag_name = tag | first %}
+          <a href="#tag-{{ tag_name | slugize }}" class="tag-link">#{{ tag_name }} ({{ tag[1].size }})</a>
+        {% endfor %}
+      </div>
+
+      {% for tag in site.tags %}
+        {% assign tag_name = tag | first %}
+        <div id="tag-{{ tag_name | slugize }}" class="tag-section">
+          <h3 class="tag-heading">#{{ tag_name }}</h3>
+          <ul class="post-list post-list-narrow">
+            {% for post in site.tags[tag_name] %}
+              <li>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-date">{{ post.date | date: date_format }}</span>
+                <a href="{{ post.url | relative_url }}" class="post-link">
+                  {{ post.title | escape }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <script src="{{ '/assets/js/archive.js' | relative_url }}"></script>
      {% endfor %}
     </ul>
   </div>

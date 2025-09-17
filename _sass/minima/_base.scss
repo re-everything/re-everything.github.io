@@ -226,6 +226,106 @@ pre {
 
 
 /**
+ * Dropdown menu
+ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  color: #fff;
+  text-decoration: none;
+  line-height: 1.5;
+  margin-right: 20px;
+  outline: none;
+  position: relative;
+  transition: color 0.3s ease;
+  
+  &:after {
+    content: '▾';
+    margin-left: 4px;
+    font-size: 0.8em;
+    opacity: 0.8;
+  }
+  
+  &:hover {
+    color: darken(#fff, 10%);
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba($background-color, 0.95);
+  min-width: 100px;
+  width: fit-content;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 6px;
+  border-radius: 3px;
+  backdrop-filter: blur(10px);
+  transform-origin: top left;
+  border: 1px solid rgba(255,255,255,0.1);
+  left: 0;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    background: rgba($background-color, 0.95);
+    transform: rotate(45deg);
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+.dropdown-content a {
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  color: #fff;
+  font-size: 0.85em;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  &:hover {
+    background-color: rgba(255,255,255,0.1);
+    transform: translateX(3px);
+  }
+}
+
+.show {
+  display: block !important;
+  animation: dropdown-appear 0.2s ease forwards;
+}
+
+@keyframes dropdown-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
  * Tables
  */
 table {

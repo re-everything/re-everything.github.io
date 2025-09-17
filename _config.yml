@@ -32,7 +32,9 @@ subtitle: |-
 instagram_username: notaaronlu
 header_pages:
   - about.markdown
-  - movies.markdown
+  - favorites.markdown
+  - films.markdown
+  - series.markdown
   - archive.markdown
 
 # Build settings

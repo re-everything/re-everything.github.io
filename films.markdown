@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Movies
-permalink: /movies/
+permalink: /films/
 ---
 
-# My Favorite Movies
+# My Favorite Films
 
 Here is a list of movies I really enjoyed.
 
