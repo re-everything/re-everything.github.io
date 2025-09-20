@@ -187,17 +187,9 @@ pre > code {
   height: 16px;
   display: inline-block;
   fill: #fff;
-  padding-right: 1px;
+  padding-right: 0px;
   vertical-align: text-bottom;
   box-sizing: content-box;
-}
-
-a[href*="instagram.com"] .svg-icon {
-  fill: #C13584;
-}
-
-a[href*="instagram.com"]:hover .svg-icon {
-  fill: #8F2762;
 }
 
 .social-media-list li + li {
