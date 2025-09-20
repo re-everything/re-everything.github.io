@@ -1,0 +1,15 @@
+
+<svg width="256px" height="256px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+    <defs>
+        <radialGradient cx="28.996%" cy="98.006%" fx="28.996%" fy="98.006%" r="108.014%" id="radialGradient-1">
+            <stop stop-color="#FFC107" offset="0%"></stop>
+            <stop stop-color="#F44336" offset="60%"></stop>
+            <stop stop-color="#9C27B0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g>
+        <path d="M128,0 C57.307,0 0,57.307 0,128 C0,198.693 57.307,256 128,256 C198.693,256 256,198.693 256,128 C256,57.307 198.693,0 128,0 Z M184,184 C184,184 184,184 184,184 L72,184 C72,184 72,184 72,184 L72,72 C72,72 72,72 72,72 L184,72 C184,72 184,72 184,72 L184,184 Z" fill="url(#radialGradient-1)"></path>
+        <path d="M128,96 C110.327,96 96,110.327 96,128 C96,145.673 110.327,160 128,160 C145.673,160 160,145.673 160,128 C160,110.327 145.673,96 128,96 Z M128,144 C119.163,144 112,136.837 112,128 C112,119.163 119.163,112 128,112 C136.837,112 144,119.163 144,128 C144,136.837 136.837,144 128,144 Z" fill="#FFFFFF"></path>
+        <circle cx="164" cy="92" r="8" fill="#FFFFFF"></circle>
+    </g>
+</svg>
