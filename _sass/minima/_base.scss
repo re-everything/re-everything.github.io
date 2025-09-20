@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /**
  * Reset some basic elements
  */
@@ -213,8 +223,17 @@ pre {
     height: 16px;
     display: inline-block;
     fill: #{$grey-color};
-    padding-right: 5px;
+    padding-right: 2px;
     vertical-align: text-top;
+    box-sizing: content-box;
+}
+
+a[href*="instagram.com"] .svg-icon {
+    fill: #C13584;
+}
+
+a[href*="instagram.com"]:hover .svg-icon {
+    fill: #8F2762;
 }
 
 .social-media-list {
@@ -351,8 +370,4 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
-}
-
-* {
-  color: #fff !important;
 }

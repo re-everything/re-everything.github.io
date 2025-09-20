@@ -20,10 +20,7 @@
 {"@context":"https://schema.org","@type":"WebPage","headline":"An archive of thoughts","url":"http://localhost:4000/archive/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css">
-  <script src="/assets/js/main.js"></script>
-  
-  <script src="/assets/js/archive.js"></script>
-  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Re-everything" /></head><body><header class="site-header" role="banner">
+  <script src="/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Re-everything" /></head><body><header class="site-header" role="banner">
 
   <div class="wrapper"><div class="site-title-group">
       <a class="site-title" rel="author" href="/">Re-everything</a>
@@ -60,49 +57,119 @@
   </header>
 
   <div class="post-content">
-    <p>A collection of my thoughts, organized by themes and topics that matter to me. Each tag represents a different facet of my journey and interests.</p>
+    <link rel="stylesheet" href="/assets/css/archive.css" />
 
-<div class="view-toggle">
-  <input type="radio" id="view-tags" name="view" value="tags" checked="" />
-  <label for="view-tags">By Topic</label>
-  <input type="radio" id="view-dates" name="view" value="dates" />
-  <label for="view-dates">By Date</label>
+<p>A collection of my thoughts, organized by themes and topics that matter to me. Each tag represents a different facet of my journey and interests.</p>
+
+<div class="archive-nav">
+  <button id="by-date-btn" class="archive-nav-btn active">by date</button>
+  <button id="by-tag-btn" class="archive-nav-btn">by tag</button>
 </div>
 
-<div class="view-content tags-view">
-  
+<div class="archive-container">
+  <div id="archive-by-date" class="archive-view">
     
-    <div class="tag-list">
-      <h3 class="post-list-heading">In #lesson:</h3>
-      <ul class="post-list">
-        
-        <li><a href="/2025/03/11/welcome-to-jekyll.html" class="post-link">Welcome to Jekyll!</a>
-          <span class="post-date">Mar 11, 2025</span>
-        </li>
-        
-      </ul>
-    </div>
-  
-</div>
+    
+      <div class="archive-year">
+        <h2 class="year-heading" data-toggle-year="2025">
+          <span class="toggle-icon">▼</span> 2025
+        </h2>
+        <div id="year-2025" class="year-content">
+          
+          
+            <div class="archive-month">
+              <h3 class="month-heading" data-toggle-month="2025-March">
+                <span class="toggle-icon">▼</span> March
+              </h3>
+              <div id="month-2025-March" class="month-content">
+                <ul class="post-list post-list-narrow">
+                  
+                    <li><span class="post-date">11</span>
+                      <a href="/2025/03/11/welcome-to-jekyll.html" class="post-link">
+                        Welcome to Jekyll!
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+      <div class="archive-year">
+        <h2 class="year-heading" data-toggle-year="2024">
+          <span class="toggle-icon">▼</span> 2024
+        </h2>
+        <div id="year-2024" class="year-content">
+          
+          
+            <div class="archive-month">
+              <h3 class="month-heading" data-toggle-month="2024-July">
+                <span class="toggle-icon">▼</span> July
+              </h3>
+              <div id="month-2024-July" class="month-content">
+                <ul class="post-list post-list-narrow">
+                  
+                    <li><span class="post-date">29</span>
+                      <a href="/2024/07/29/another-post.html" class="post-link">
+                        Another Post
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    
+  </div>
 
-<div class="view-content dates-view">
-  
-  
-    <h3 class="post-list-heading">2025</h3>
-    <ul class="post-list">
+  <div id="archive-by-tag" class="archive-view" style="display: none;">
+    <div class="tags-overview">
       
-        <li>
-          <a href="/2025/03/11/welcome-to-jekyll.html" class="post-link">Welcome to Jekyll!</a><span class="post-date">Mar 11</span>
-          
-            <span class="post-tags">
-              #lesson
-            </span>
-          
-        </li>
+        
+        <a href="#tag-testing" class="tag-link">#testing (1)</a>
       
-    </ul>
-  
+        
+        <a href="#tag-lesson" class="tag-link">#lesson (1)</a>
+      
+    </div>
+
+    
+      
+      <div id="tag-testing" class="tag-section">
+        <h3 class="tag-heading">#testing</h3>
+        <ul class="post-list post-list-narrow">
+          
+            <li><span class="post-date">Jul 29, 2024</span>
+              <a href="/2024/07/29/another-post.html" class="post-link">
+                Another Post
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+      
+      <div id="tag-lesson" class="tag-section">
+        <h3 class="tag-heading">#lesson</h3>
+        <ul class="post-list post-list-narrow">
+          
+            <li><span class="post-date">Mar 11, 2025</span>
+              <a href="/2025/03/11/welcome-to-jekyll.html" class="post-link">
+                Welcome to Jekyll!
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    
+  </div>
 </div>
+<script src="/assets/js/archive.js"></script>
+
 
   </div>
 
@@ -128,7 +195,6 @@
 
   </div>
 
-</footer>
-</body>
+</footer></body>
 
 </html>
