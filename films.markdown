@@ -1,9 +1,10 @@
 ---
 layout: page
 permalink: /films/
+hide_title: true
 ---
 
-# My Favorite Films
+<h1 style="font-size: 2em; font-weight: normal;">My Favorite Films</h1>
 
 <p>Here is a list of films I really enjoyed. The slashes (/) indicate the depth of my enjoyment or its meanifulness to my life.</p>
 
