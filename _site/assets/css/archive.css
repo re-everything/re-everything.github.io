@@ -92,12 +92,14 @@
 
 .post-link {
   font-size: 1rem;
-  color: #333;
+  color: #000;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .post-link:hover {
   text-decoration: underline;
+  font-weight: 600;
 }
 
 .tags-overview {

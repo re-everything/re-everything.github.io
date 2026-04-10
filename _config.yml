@@ -39,6 +39,7 @@ header_pages:
 
 # Build settings
 theme: minima
+permalink: /:title/
 plugins:
   - jekyll-feed
 

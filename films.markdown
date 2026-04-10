@@ -5,11 +5,15 @@ permalink: /films/
 
 # My Favorite Films
 
-Here is a list of movies I really enjoyed. The slashes (/) indicate how much I love them: / = loved it, // = really loved it, /// = absolutely adored it.
+<p>Here is a list of films I really enjoyed. The slashes (/) indicate the depth of my enjoyment or its meanifulness to my life.</p>
+
+<blockquote>
+  <p><strong>Disclaimer</strong>: This list was built starting from 2013, so many entries are quite outdated or reflect a more immature perspective. Evolving tastes, so to speak.</p>
+</blockquote>
 
 {% for genre in site.data.films.genres %}
 <div style="margin-top: 2em; padding-top: 1em; border-top: 3px solid {{ genre.color }};">
-  <h2 style="color: {{ genre.color }}; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">{{ genre.name }}</h2>
+  <h2 style="color: {{ genre.color }}; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 1.3em;">{{ genre.name }}</h2>
   
   <ul>
   {% for movie in genre.movies %}
