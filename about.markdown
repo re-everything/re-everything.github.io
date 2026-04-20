@@ -8,7 +8,7 @@ menu_title: About
 
 <p>Inspired by a colleague, I've decided to start my own weblog, a space to re-everything the thoughts that have shaped me since my teens.</p>
 
-<p>This isn't just a blog confined to AI or tech. It's a mosaic of everything that fuels my curiosity and makes me <em>me</em>; Technology and humanity. Science and art. Religion, politics, fashion, music, finance, economics, personality and love.</p>
+<p>Beyond AI and tech, it's a mosaic of everything that fuels my curiosity and makes me <em>me</em>; Technology and humanity. Science and art. Religion, politics, fashion, music, finance, economics, personality and love.</p>
 
 <p>Each post begins with a quote that once moved me, challenged me, stayed with me. From there, I'll share a piece of myself.</p>
 
